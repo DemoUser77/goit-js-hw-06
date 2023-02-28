@@ -8,12 +8,14 @@ function handleFormSabmit(event) {
  const formElements = event.currentTarget.elements;
 console.log(formElements);
 
-const email = formElements.email.value;
-const password = formElements.password.value;
-
-if (formElements.email.value === "" || formElements.password.value === "") {
+    const dataForm = {
+        email: formElements.email.value,
+        password: formElements.password.value
+    };
+   
+if (dataForm.email === "" || dataForm.password === "") {
       alert('Всі поля повинні бути заповнені.');
-    }
-console.log(`email: ${email} password: ${password}`);
+}
+     console.log(dataForm);
     event.currentTarget.reset();
 };
